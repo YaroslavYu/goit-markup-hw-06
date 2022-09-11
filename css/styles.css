@@ -499,6 +499,7 @@ img {
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.14;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--footer-logo-hero-mainbackgr-color);
 }
@@ -554,6 +555,7 @@ img {
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    cursor: pointer;
 
     color: var(--footer-logo-hero-mainbackgr-color);
 
@@ -594,8 +596,6 @@ img {
         visibility var(--animation-duration-and-function);
 }
 
-
-
 .modal-window {
     position: absolute;
     top: 50%;
@@ -625,6 +625,7 @@ img {
     justify-content: center;
     align-items: center;
 
+    padding: 0;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -648,7 +649,7 @@ img {
 .modal-main-text {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1, 15;
+    line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
 
@@ -672,13 +673,11 @@ img {
     line-height: 1.17;
     letter-spacing: 0.01em;
 
-    padding-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .modal-input-wrapper {
     position: relative;
-
-    transition: fill var(--animation-duration-and-function);
 }
 
 .modal-input-wrapper:focus-within {
@@ -716,13 +715,16 @@ img {
     transform: translateY(-50%);
 
     fill: inherit;
+
+    transition: fill var(--animation-duration-and-function);
 }
 
 .modal-label-comment {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .modal-text-comment {
+    display: block;
     width: 100%;
     height: 120px;
     resize: none;
@@ -734,7 +736,6 @@ img {
 }
 
 .modal-text-comment::placeholder {
-
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
@@ -745,13 +746,17 @@ img {
 .modal-label-checkbox {
     display: flex;
     align-items: center;
-    padding-bottom: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .modal-form-chekbox:focus+.own-chekbox {
-    box-shadow: 0 0 0 2px #0000bb;
+    box-shadow: 0 0 0 2px var(--accent-color);
 }
 
+.modal-form-chekbox:checked:focus+.own-chekbox {
+    box-shadow: 0 0 0 2px #000000;
+}
 
 .modal-form-chekbox:checked+.own-chekbox {
     border-color: var(--accent-color);
@@ -768,6 +773,7 @@ img {
     border-width: 2px;
     border-radius: 2px;
     border-color: var(--headers-nav-text-color);
+    cursor: pointer;
 
     margin-right: 9px;
 }
@@ -801,6 +807,7 @@ img {
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--footer-logo-hero-mainbackgr-color);
+    cursor: pointer;
 
     padding: 10px 52px;
 
